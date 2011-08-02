@@ -50,5 +50,9 @@ module Running
     def mingw_19?
       mingw? && RUBY_VERSION >= "1.9"
     end
+    
+    def from_the_police?
+      true
+    end
   end
 end
