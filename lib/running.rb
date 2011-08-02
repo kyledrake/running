@@ -4,7 +4,7 @@ module Running
 
   class << self
     def ruby?
-      !mswin? && (!defined?(RUBY_ENGINE) || RUBY_ENGINE == "ruby" || RUBY_ENGINE == "rbx")
+      !mswin? && (!defined?(RUBY_ENGINE) || RUBY_ENGINE == "ruby" || RUBY_ENGINE == "rbx" || RUBY_ENGINE == "maglev")
     end
 
     def ruby_18?
@@ -29,6 +29,10 @@ module Running
 
     def rbx?
       ruby? && !defined?(RUBY_ENGINE).nil? && RUBY_ENGINE == "rbx"
+    end
+
+    def maglev?
+      ruby? && !defined?(RUBY_ENGINE).nil? && RUBY_ENGINE == "maglev"
     end
 
     def jruby?
