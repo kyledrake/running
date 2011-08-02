@@ -21,6 +21,9 @@ Currently the following methods are present:
     # JRuby
     Running.jruby?
     
+    # MagLev
+    Running.maglev?
+    
     # Windows
     Running.mswin?
     Running.mingw?
