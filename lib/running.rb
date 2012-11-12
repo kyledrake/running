@@ -8,15 +8,15 @@ module Running
     end
 
     def ruby_18?
-      ruby? && RUBY_VERSION =~ /^1.8/
+      ruby? && ruby_version_matches(1.8)
     end
 
     def ruby_19?
-      ruby? && RUBY_VERSION =~ /^1.9/
+      ruby? && ruby_version_matches(1.9)
     end
 
     def ruby_20?
-      ruby? && RUBY_VERSION =~ /^2.0/
+      ruby? && ruby_version_matches(2.0)
     end
 
     def mri?
@@ -24,11 +24,11 @@ module Running
     end
 
     def mri_18?
-      mri? && RUBY_VERSION =~ /^1.8/
+      mri? && ruby_version_matches(1.8)
     end
 
     def mri_19?
-      mri? && RUBY_VERSION =~ /^1.9/
+      mri? && ruby_version_matches(1.9)
     end
 
     def rbx?
@@ -52,19 +52,25 @@ module Running
     end
 
     def mingw_18?
-      mingw? && RUBY_VERSION =~ /^1.8/
+      mingw? && ruby_version_matches(1.8)
     end
 
     def mingw_19?
-      mingw? && RUBY_VERSION =~ /^1.9/
+      mingw? && ruby_version_matches(1.9)
     end
 
     def mingw_20?
-      mingw? && RUBY_VERSION =~ /^2.0/
+      mingw? && ruby_version_matches(2.0)
     end
 
     def from_the_police?
       true
+    end
+
+    private
+
+    def ruby_version_matches(version)
+      !(RUBY_VERSION =~ /^#{version}/).nil?
     end
   end
 end
