@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name = 'running'
-  s.version = '0.0.3'
+  s.version = '0.0.4'
   s.authors = ['Kyle Drake']
   s.email = ['kyledrake@gmail.com']
   s.homepage = 'http://github.com/kyledrake/running'
