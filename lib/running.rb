@@ -14,7 +14,7 @@ module Running
     def ruby_19?
       ruby? && RUBY_VERSION =~ /^1.9/
     end
-    
+
     def ruby_20?
       ruby? && RUBY_VERSION =~ /^2.0/
     end
@@ -58,11 +58,11 @@ module Running
     def mingw_19?
       mingw? && RUBY_VERSION =~ /^1.9/
     end
-    
+
     def mingw_20?
       mingw? && RUBY_VERSION =~ /^2.0/
     end
-    
+
     def from_the_police?
       true
     end
